@@ -21,6 +21,18 @@ import { HomeComponent } from "./layouts/home/home.component";
 // import { LoginComponent } from "./layouts/signup/login/login.component";
 // import { RegisterComponent } from "./layouts/signup/register/register.component";
 
+// Importing social login module and facebook login provider.
+import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
+import { PagesInvestorComponent } from './pages/pages-investor/pages-investor.component';
+ // Client id for the facebook oauth. This is used for validation of our application to facebook.
+// https://developers.facebook.com/
+const facebook_oauth_client_id: string = '489836511607486';
+// let config = new AuthServiceConfig([
+//   {
+//     id: FacebookLoginProvider.PROVIDER_ID,
+//     provider: new FacebookLoginProvider(facebook_oauth_client_id)
+//   }
+// ]);
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +41,8 @@ import { HomeComponent } from "./layouts/home/home.component";
     //BodyComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    
 
     //LoginComponent
   ],
@@ -43,6 +56,7 @@ import { HomeComponent } from "./layouts/home/home.component";
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule
+    // PagesInvestorComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
